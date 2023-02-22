@@ -1,0 +1,35 @@
+{% extends 'main/main.html' %}
+{% load static %}
+    {% block css %}
+        <link rel=stylesheet href="{% static 'css/course.min.css' %}">
+    {% endblock %}
+{% block content %}
+
+    <main>
+        <section class=hero>
+            <div class=underlay>
+                <div class="underlay_bgmental rellax"></div>
+            </div>
+            <div class="container d-flex flex-column align-items-center"><span
+                    class="hero_icon d-flex align-items-center justify-content-center">
+                    <i class="fa-solid fa-calculator icon"></i>
+                </span>
+                <h3 class=hero_header>Mental arifmetika kursimiz</h2>
+                <p class=hero_text>
+                    SIFATLI VA ARZON NARXDAGI MENTAL ARIFMETIKA  KURSIGA  
+                    BARCHA BOLAJONLARNI ( 7 yoshdan 12 yoshgacha) TAKLIF ETAMIZ !!! 
+                    ✅ 🤔 FARZANDINGIZNI BO'SH VAQTINI QIZIQARLI, SERMAZMUN VA FOYDALI O'TISHINI HOHLAYSIZMI?
+                    ✅ 😳FARZANDINGIZDA OZ FURSAT ICHIDA IJOBIY TOMONGA O'ZGARISHLAR BO'LISHIGA GUVOH BO'LMOQCHIMISIZ???
+                   ✅ 😃FARZANDINGIZ MATEMATIKADAN (+),(-),(×),(÷) USHBU AMALLARNI HECH BIR QIYINCHILIKSIZ, 
+                   KONKULATOR TEZLIGI BILAN (HECH QANDAY RUCHKA-DAFTARSIZ)😳ISHLASHINI HOHLAYSIZMI???
+                   <br>   Unda haftada 3 marotaba, 1,5 soatdan 2 soatgacha vaqtda bo‘ladigan  
+                   "Mental arifmetika" kursimizga marhamat.
+                </p>
+              
+             
+            </div>
+        </section>
+    
+    </main>
+
+{% endblock %}

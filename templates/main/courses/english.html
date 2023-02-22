@@ -1,0 +1,100 @@
+{% extends 'main/main.html' %}
+{% load static %}
+    {% block css %}
+        <link rel=stylesheet href="{% static 'css/course.min.css' %}">
+    {% endblock %}
+{% block content %}
+
+    <main>
+        <section class=hero>
+            <div class=underlay>
+                <div class="underlay_bg3 rellax"></div>
+            </div>
+            <div class="container d-flex flex-column align-items-center"><span
+                    class="hero_icon d-flex align-items-center justify-content-center">
+                    <i class="fa-solid fa-earth-americas icon"></i>
+                </span>
+                <h2 class=hero_header>Ingliz-tili darslarimiz</h2>
+                <p class=hero_text>
+                    Ingliz - tilini Bobil akademiyasida malakali o'qituvchilardan o'rganing
+                    va kelajagingizni Bobil akademiyasi bilan quring.
+                </p>
+             
+            </div>
+        </section>
+     
+        <section class=skills id=skills>
+            <div class=container>
+                <div class=skills_header>
+                    <h2 class=skills_header-title>Kurs davomida o'tiladigan bo'limlar</h2>
+                   
+                </div>
+                <ul class="skills_list d-sm-flex flex-wrap">
+                    <li
+                        class="skills_list-item col-sm-6 col-xl-3 d-flex flex-column align-items-center justify-content-center">
+                        <span class="skills_list-item_title h5 d-flex flex-column align-items-center">
+                            Beginner</span>
+                       
+                    </li>
+                    <li
+                        class="skills_list-item col-sm-6 col-xl-3 d-flex flex-column align-items-center justify-content-center">
+                        <span class="skills_list-item_title h5 d-flex flex-column align-items-center">
+                             Elementary</span>
+                        
+                    </li>
+                    <li
+                        class="skills_list-item col-sm-6 col-xl-3 d-flex flex-column align-items-center justify-content-center">
+                        <span class="skills_list-item_title h5 d-flex flex-column align-items-center">
+                            Pre-inretmediate</span>
+                        
+                    </li>
+                    <li
+                        class="skills_list-item col-sm-6 col-xl-3 d-flex flex-column align-items-center justify-content-center">
+                        <span class="skills_list-item_title h5 d-flex flex-column align-items-center">
+                            Inretmediate</span>
+
+                    </li>
+                    <li
+                        class="skills_list-item col-sm-6 col-xl-3 d-flex flex-column align-items-center justify-content-center">
+                        <span class="skills_list-item_title h5 d-flex flex-column align-items-center">
+                            Upper-inretmediate</span>
+
+                    </li>
+                    <li
+                        class="skills_list-item col-sm-6 col-xl-3 d-flex flex-column align-items-center justify-content-center">
+                        <span class="skills_list-item_title h5 d-flex flex-column align-items-center">
+                            Pre-IELTS</span>
+
+                    </li>
+                    <li
+                        class="skills_list-item col-sm-6 col-xl-3 d-flex flex-column align-items-center justify-content-center">
+                        <span class="skills_list-item_title h5 d-flex flex-column align-items-center">
+                            IELTS</span>
+
+                    </li>
+                   
+                   
+                </ul>
+            </div>
+            <button class="btn__courses" data-modal-target = "#modal1">Ro'yhatdan o'tish</button>
+            <form action="{% url 'register_course' %}" id="modal1" class="modal" method="post">
+                {% csrf_token %}
+                <a data-close-button class="button__close">X</a>
+                <h4 class="heading__add">Ro'yhatdan o'tish</h4>
+                <input type="text" name="first_name" placeholder="Ism..."><br>
+    
+                <input type="text" name="last_name" placeholder="Familya...">
+                <input type="tel" name="phone" placeholder="Tel...">
+                <input type="hidden" name="course" value="Ingliz-tili"><br>
+    
+                <button class="button__add">Ro'yhatdan o'tish</button>
+            </form>
+
+            <div class="add__lesson" id="overlay">
+           
+            </div>
+        </section>
+    
+    </main>
+
+{% endblock %}

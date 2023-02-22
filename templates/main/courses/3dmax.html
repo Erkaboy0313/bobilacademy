@@ -1,0 +1,32 @@
+{% extends 'main/main.html' %}
+{% load static %}
+    {% block css %}
+        <link rel=stylesheet href="{% static 'css/course.min.css' %}">
+    {% endblock %}
+{% block content %}
+
+    <main>
+        <section class=hero>
+            
+            <div class=underlay>
+                <div class="underlay_bg1 rellax" ></div>
+            </div>
+            <div class="container d-flex flex-column align-items-center">
+                <span class="hero_icon d-flex align-items-center justify-content-center">
+                    <i class="fa-solid fa-cube icon"></i>
+                </span>
+                <h2 class=hero_header>3D MAX kursi</h2>
+                <p class=hero_text>
+                    3D Max turli xil texnika va mexanizmlardan foydalangan holda turli shakl va murakkablikdagi 
+                    uch o'lchovli kompyuter modellarini, 
+                    atrofdagi dunyoning haqiqiy yoki hayoliy ob'ektlarini yaratish uchun mo'ljallangan dasturdir.
+                </p>
+              
+             
+            </div>
+        </section>
+    
+    
+    </main>
+
+{% endblock %}

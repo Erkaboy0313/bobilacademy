@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kirish</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1"  />
+</head>
+<body>
+
+<div class="login-box">
+    <div class="login-card">
+        <form method="post">
+            {% csrf_token %}
+            <div class="logo-for-login">
+                <a href="/"><img src="{% static 'img/logo.png' %}" alt=""></a>
+            </div>
+            <div class="inputs">
+                <input name="username" placeholder="login" type="text">
+                <input name="password" placeholder="parol" type="password">
+            </div>
+            <button class="button-login">Kirish</button>
+        </form> 
+    </div>
+</div>
+
+</body>
+</html>

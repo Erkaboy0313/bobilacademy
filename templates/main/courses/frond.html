@@ -1,0 +1,122 @@
+{% extends 'main/main.html' %}
+{% load static %}
+    {% block css %}
+        <link rel=stylesheet href="{% static 'css/course.min.css' %}">
+    {% endblock %}
+{% block content %}
+    <main>
+        <section class=hero>
+            <div class=underlay>
+                <div class="underlay_bg rellax"></div>
+            </div>
+            <div class="container d-flex flex-column align-items-center"><span
+                    class="hero_icon d-flex align-items-center justify-content-center">
+                    <i class="fa-solid fa-code icon"></i>
+                </span>
+                <h2 class=hero_header>Web Frotend dasturlash kursi</h2>
+                <p class=hero_text>
+                    Front-end dasturchi veb-saytlar va veb-ilovalarning 
+                    front-end qismini - foydalanuvchilar ko'radigan va o'zaro aloqada bo'ladigan 
+                    qismini yaratadi.
+                </p>
+              
+             
+            </div>
+        </section>
+     
+        <section class=skills id=skills>
+            <div class=container>
+                <div class=skills_header>
+                    <h2 class=skills_header-title>Kurs davomida quyidagi texnalogiyalar o'tiladi</h2>
+                   
+                </div>
+                <ul class="skills_list d-sm-flex flex-wrap">
+                    <li
+                        class="skills_list-item col-sm-6 col-xl-3 d-flex flex-column align-items-center justify-content-center">
+                        <span class="skills_list-item_title h5 d-flex flex-column align-items-center">
+                            <i class="fa-brands fa-html5 icon"></i>Html5</span>
+                        <p class=skills_list-item_text>
+                            HTML (Hypertext Markup Language — hipermatnli belgilash tili) yani standart umumlashtirilgan belgilash tili
+                        </p>
+                    </li>
+                    <li
+                        class="skills_list-item col-sm-6 col-xl-3 d-flex flex-column align-items-center justify-content-center">
+                        <span class="skills_list-item_title h5 d-flex flex-column align-items-center">
+                            <i class="fa-brands fa-css3-alt icon"></i> Css</span>
+                        <p class=skills_list-item_text>
+                            CSS (Cascading style sheets) yozilgan hujjatlarning
+                             ko’rinishini tasvirlash uchun ishlatiladigan rasmiy til hisoblanadi.
+                        </p>
+                    </li>
+                    <li
+                        class="skills_list-item col-sm-6 col-xl-3 d-flex flex-column align-items-center justify-content-center">
+                        <span class="skills_list-item_title h5 d-flex flex-column align-items-center">
+                            <i class="fa-brands fa-js icon"></i>JavaScript</span>
+                        <p class=skills_list-item_text>
+                            JS ECMAScript spesifikatsiyasiga 
+                            mos keladigan yuqori darajali hamda aniq talqin qilingan dasturlash tili
+                        </p>
+                    </li>
+                    <li
+                        class="skills_list-item col-sm-6 col-xl-3 d-flex flex-column align-items-center justify-content-center">
+                        <span class="skills_list-item_title h5 d-flex flex-column align-items-center">
+                            <i class="fa-brands fa-bootstrap icon"></i>Bootstrap</span>
+                        <p class=skills_list-item_text>
+                            Bootstrap  mobil qurilmalar uchun moslashuvchan hamda front-end dasturlash uchun moʻljallangan bepul va ochiq kodli CSS freymvorki.
+                        </p>
+                    </li>
+                    <li
+                        class="skills_list-item col-sm-6 col-xl-3 d-flex flex-column align-items-center justify-content-center">
+                        <span class="skills_list-item_title h5 d-flex flex-column align-items-center">
+                            <i class="fa-brands fa-sass icon"></i>SCSS</span>
+                        <p class=skills_list-item_text>
+                            SCSS - bu CSS-da kompilyatsiya qilingan preprocessor tili. Bu SASSning maxsus turi (Syntactically Awesome Style Sheets)
+                        </p>
+                    </li>
+                    <li
+                        class="skills_list-item col-sm-6 col-xl-3 d-flex flex-column align-items-center justify-content-center">
+                        <span class="skills_list-item_title h5 d-flex flex-column align-items-center">
+                            <i class="fa-brands fa-js-square icon"></i>jQuery</span>
+                        <p class=skills_list-item_text>
+                            JQuery-ning maqsadi veb-saytingizda JavaScript-ni ishlatishni ancha osonlashtirishdir
+                        </p>
+                    </li>
+                    <li
+                        class="skills_list-item col-sm-6 col-xl-3 d-flex flex-column align-items-center justify-content-center">
+                        <span class="skills_list-item_title h5 d-flex flex-column align-items-center">
+                            <i class="fa-brands fa-react icon"></i>React.js</span>
+                        <p class=skills_list-item_text>
+                            React - bu asosan web dasturlashda html,css va javascript lardan keyingi o'rinda turuvchi va o'rganiliniluvchi freymwork hisoblanadi
+                        </p>
+                    </li>
+                    <li
+                        class="skills_list-item col-sm-6 col-xl-3 d-flex flex-column align-items-center justify-content-center">
+                        <span class="skills_list-item_title h5 d-flex flex-column align-items-center">
+                            <i class="fa-solid fa-code icon"></i> Real loyihalar bilan ishlash</span>
+                        <p class=skills_list-item_text>
+                            
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <button class="btn__courses" data-modal-target = "#modal1">Ro'yxatdan o'tish</button>
+            <form action="{% url 'register_course' %}" id="modal1" class="modal" method="post">
+                {% csrf_token %}
+                <a data-close-button class="button__close">X</a>
+                <h4 class="heading__add">Ro'yxatdan o'tish</h4>
+                <input type="text" name="first_name" placeholder="Ism..."><br>
+    
+                <input type="text" name="last_name" placeholder="Familya...">
+                <input type="tel" name="phone" placeholder="Tel...">
+                <input type="hidden" name="course" value="Frontend"><br>
+    
+                <button class="button__add">Ro'yxatdan o'tish</button>
+            </form>
+
+            <div class="add__lesson" id="overlay">
+           
+            </div>
+        </section>
+    
+    </main>
+{% endblock %}

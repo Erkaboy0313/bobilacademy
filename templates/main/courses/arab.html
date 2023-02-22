@@ -1,0 +1,35 @@
+{% extends 'main/main.html' %}
+{% load static %}
+    {% block css %}
+        <link rel=stylesheet href="{% static 'css/course.min.css' %}">
+    {% endblock %}
+{% block content %}
+
+    <main>
+        <section class=hero>
+            <div class=underlay>
+                <div class="underlay_bgarab rellax"></div>
+            </div>
+            <div class="container d-flex flex-column align-items-center"><span
+                    class="hero_icon d-flex align-items-center justify-content-center">
+                    <i class="fa-solid fa-earth-americas icon"></i>
+                </span>
+                <h2 class=hero_header>Arab tili kursimiz</h2>
+                <p class=hero_text>
+                     Bobil Akademiyasi sizni arab tili o’quv kurslarga taklif etadi. 
+                    Bizning o’quv markazimizda siz:
+                    -Bir necha yillik tajribaga ega bo’lgan malakaki ustozlardan  sifatli ta’lim olish
+                    -Arab xarflarini o’zbek talaffuzida emas balki arab talaffuzida o’rganish
+                    -Qulay va shinam xonalarda xamyonbop narxlarda  bilim olish va yana boshqa ko’plab 
+                    ajoyib imkoniyatlarga ega bo’lasiz. 
+                    Sizni Bobil akademiyasida kutib qolamiz.
+                </p>
+              
+             
+            </div>
+        </section>
+     
+    
+    </main>
+
+{% endblock %}

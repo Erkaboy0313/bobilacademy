@@ -1,0 +1,445 @@
+{% extends 'main/main.html' %}
+{% load static %}
+{% block content %}
+
+    <main>
+        <div class=underlay></div>
+        <section class=hero>
+            <div class="container d-lg-flex align-items-center">
+                <div class=hero_content >
+                    <h1 class=hero_content-header data-aos=fade-up>Kelajak ilmini hozirdan o'rganing !!!</h1>
+                    <div class="hero_content-rating d-flex flex-column flex-sm-row align-items-center">
+                        <p class=text data-aos=fade-left>Bobil Academy bilan sifatli ta'lim oling</p>
+                        <div class=wrapper data-aos=fade-left data-aos-delay=50>
+                            <ul class="rating d-flex align-items-center">
+                                <li class=rating_star><i class="fa-solid fa-star icon"></i></li>
+                                <li class=rating_star><i class="fa-solid fa-star icon"></i></li>
+                                <li class=rating_star><i class="fa-solid fa-star icon"></i></li>
+                                <li class=rating_star><i class="fa-solid fa-star icon"></i></li>
+                                <li class=rating_star><i class="fa-solid fa-star icon"></i></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <p class=hero_content-text data-aos=fade-up data-aos-delay=50>
+                        Bobil akademiyasida  <b style="color: #01B4B1;">Dasturlash & Til & Tayyorlov</b> kurslari mavjud bo'lib, 
+                        siz ushbu kurslarni malakali va ko'p yillik tajribaga ega oq'ituvchilardan o'rganasiz. 
+                        <br/>
+                        "Maqsad qo'ying va bu maqsadingizga Bobil akademiyasi bilan erishing! "
+                    </p>
+                    <div class="hero_content-action d-flex flex-wrap">
+
+                        <a class="btn btn--gradient" href="{% url 'register_course' %}" data-aos=fade-left>
+                            <span class=text>Ro'yxatdan o'tish</span>
+                        </a> 
+                    </div>
+                </div>
+                <div class="hero_media col-lg-6 ">
+                    <lottie-player src="{% static 'lotie/home.json' %}" background=transparent speed=1 style="width: 100%; height: 90%; padding: 0;"
+                        loop autoplay></lottie-player>
+                </div>
+            </div>
+        </section>
+
+        <section style="padding: 10px" class=about>
+            <div class=container>
+                <div class="about_main">
+                    <div class=content>
+                        <h2 style="color: #01B4B1;" class=about_main-header data-aos=fade-in>Dasturlashni o'rganmoqchimisiz?</h2>
+                        <ul class=about_main-list>
+                            <li class=about_main-list_item data-aos=fade-up><i style="color: #01B4B1" class="fa-solid fa-check icon"></i>
+                                <div class=content>
+                                    <h5 class=title>Dasturlashni o'rganishga imkoniyatingiz yo'qmi ?</h5>
+                                    <p class=text>
+                                        Dasturlashni bizda o'rganing va o'z imkoniyatlaringizni 
+                                        namayon etib grand yuting va bepul o'qish imkoniyatiga ega bo'ling.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class=about_main-list_item data-aos=fade-up data-aos-delay=50>
+                                <i style="color: #01B4B1" class="fa-solid fa-check icon"></i>
+                                <div class=content>
+                                    <h5 class=title>Dasturlashni siz real loyihalar orqali o'rganmoqchimisiz ?</h5>
+                                    <p class=text>
+                                        Bizda darslar jarayonida katta va kichik real loyihalar asosida dasturlashni o'rganing va o'zingiz
+                                        uchun portfolio yarating. 
+                                    </p>
+                                </div>
+                            </li>
+                           
+                        </ul>
+                    </div>
+                </div>
+                <div class=about_review data-aos=zoom-in>
+                    <lottie-player src={% static 'lotie/developer.json' %} background=transparent speed=1 style="width: 100%; height: 100%"
+                    loop autoplay></lottie-player>
+                </div>
+            </div>
+        </section>
+
+        <section style="padding: 10px; margin-bottom: 100px; margin-top: 100px;"  class=about>
+            <div class=container>
+                <div class=about_main>
+                    <div class=content>
+                        <h2 style="color: #01B4B1" class=about_main-header data-aos=fade-in>Til kurslarimiz</h2>
+                        <ul class=about_main-list>
+                            <li class=about_main-list_item data-aos=fade-up><i style="color: #01B4B1" class="fa-solid fa-check icon"></i>
+                                <div class=content>
+                                    <h5 class=title>Ingliz tili</h5>
+                                </div>
+                            </li>
+
+                            <li class=about_main-list_item data-aos=fade-up data-aos-delay=50>
+                                <i style="color: #01B4B1" class="fa-solid fa-check icon"></i>
+                                <div class=content>
+                                    <h5 class=title>Rus tili</h5>
+                                </div>
+                            </li>
+
+                            <li class=about_main-list_item data-aos=fade-up data-aos-delay=50>
+                                <i style="color: #01B4B1" class="fa-solid fa-check icon"></i>
+                                <div class=content>
+                                    <h5 class=title>Arab tili</h5>
+                                </div>
+                            </li>
+                           
+                        </ul>
+                    </div>
+                </div>
+                <div class=about_review data-aos=zoom-in>
+                    <lottie-player src={% static 'lotie/language.json' %} background=transparent speed=1 style="width: 100%; height: 100%"
+                    loop autoplay></lottie-player>
+                </div>
+            </div>
+        </section>
+
+        <section style="padding: 10px; margin-bottom: 100px;"  class=about>
+            <div class=container>
+                <div class=about_main>
+                    <div class=content>
+                        <h2 style="color: #01B4B1" class=about_main-header data-aos=fade-in>Tayyorlov kurslarimiz</h2>
+                        <ul class=about_main-list>
+                            <li class=about_main-list_item data-aos=fade-up>
+                                <i style="color: #01B4B1" class="fa-solid fa-check icon"></i>
+                                <div class=content>
+                                    <h5 class=title>Kompyuter savodxonligi</h5>
+                                </div>
+                            </li>
+
+                            <li class=about_main-list_item data-aos=fade-up data-aos-delay=50>
+                                <i style="color: #01B4B1" class="fa-solid fa-check icon"></i>
+                                <div class=content>
+                                    <h5 class=title>Matematika</h5>
+                                </div>
+                            </li>
+
+                            <li class=about_main-list_item data-aos=fade-up data-aos-delay=50>
+                                <i style="color: #01B4B1" class="fa-solid fa-check icon"></i>
+                                <div class=content>
+                                    <h5 class=title>Mentalniy arifmetika</h5>
+                                </div>
+                            </li>
+
+                            <li class=about_main-list_item data-aos=fade-up data-aos-delay=50>
+                                <i style="color: #01B4B1" class="fa-solid fa-check icon"></i>
+                                <div class=content>
+                                    <h5 class=title>Maktabga tayyorlov</h5>
+                                </div>
+                            </li>
+                           
+                        </ul>
+                    </div>
+                </div>
+                <div class=about_review data-aos=zoom-in>
+                    <lottie-player src={% static 'lotie/prepration.json' %} background=transparent speed=1 style="width: 100%; height: 100%"
+                    loop autoplay></lottie-player>
+                </div>
+            </div>
+        </section>
+
+        <div class=features id="coursess">
+            <div class=container>
+                <ul class="features_list d-md-flex flex-wrap">
+
+                    <li class="features_list-item col-md-6 col-xl-4" data-order=1 data-aos=fade-up>
+                        <a href="{% url 'course_type' 1 %}">
+                            <div class=card>
+                                <div class=content>
+                                    <div class=card_media><i class="fa-solid fa-code icon"></i></div>
+                                    <div class=card_main>
+                                        <h5 class=card_main-title>Web Frontend</h5>
+                                        <p class=card_main-text>
+                                            Fronted kursimizda zamonaviy texnologiyalardan foydalanib web-saytlar yaratasiz</p>
+                                    </div>
+                                </div>
+                            </div> 
+                        </a>
+                    </li>
+
+                    <li class="features_list-item col-md-6 col-xl-4" data-order=2 data-aos=fade-up>
+                        <a href="{% url 'course_type' 2 %}">
+                            <div class=card>
+                                <div class=content>
+                                    <div class=card_media><i class="fa-solid fa-gears icon"></i></div>
+                                    <div class=card_main>
+                                        <h5 class=card_main-title>Backend</h5>
+                                        <p class=card_main-text>Python dasturlash tilidan foydalanib web-sayt, mobil va desktop ilovalari uchun
+                                             <b>backend</b> qismini yaratish</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="features_list-item col-md-6 col-xl-4" data-order=3 data-aos=fade-up>
+                        <a href="{% url 'course_type' 3 %}">
+                            <div class=card>
+                                <div class=content>
+                                    <div class=card_media><i class="fa-brands fa-android icon"></i></div>
+                                    <div class=card_main>
+                                        <h5 class=card_main-title>Android</h5>
+                                        <p class=card_main-text>Android Studio va Kotlin dasturlash tilidan 
+                                            foydalanib mobil ilovalar yararish</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a> 
+                    </li>
+
+                    <li class="features_list-item col-md-6 col-xl-4" data-order=5 data-aos=fade-up>
+                        <a href="{% url 'course_type' 5 %}">
+                            <div class=card>
+                                <div class=content>
+                                    <div class=card_media>
+                                        <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+                                             width="700.000000pt" height="700.000000pt" viewBox="0 0 700.000000 700.000000"
+                                             preserveAspectRatio="xMidYMid meet" class="icon">
+
+                                            <g transform="translate(0.000000,700.000000) scale(0.100000,-0.100000)" stroke="none">
+                                            <path d="M3987 6011 c-21 -6 -2507 -2495 -2507 -2511 0 -8 171 -186 380 -395
+                                            l380 -380 1640 1640 c902 902 1640 1642 1640 1645 0 6 -1513 7 -1533 1z"/>
+                                            <path d="M3312 3019 c-370 -369 -672 -676 -672 -682 0 -7 302 -314 670 -682
+                                            l670 -670 133 0 c72 0 420 1 772 3 l640 2 -675 675 -675 675 675 675 675 675
+                                            -770 0 -771 0 -672 -671z"/>
+                                            </g>
+                                            </svg>
+                                    </div>
+                                    <div class=card_main>
+                                        <h5 class=card_main-title>Flutter</h5>
+                                        <p class=card_main-text>
+                                            Flutter framework va Dart dasturlash tili orqali 
+                                            <b>Android</b> va <b> IOS</b> tizimlariga mobil ilovalar yaratish</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="features_list-item col-md-6 col-xl-4" data-order=6 data-aos=fade-up>
+                        <a href="{% url 'course_type' 6 %}">
+                            <div class=card>
+                                <div class=content>
+                                    <div class=card_media><i class="fa-solid fa-cube icon"></i></div>
+                                    <div class=card_main>
+                                        <h5 class=card_main-title>3D MAX</h5>
+                                        <p class=card_main-text>
+                                            3D Max turli xil texnika va mexanizmlardan foydalangan holda turli shakl va murakkablikdagi 
+                                             uch o'lchovli kompyuter modellarini yaratish dasturi.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a> 
+                    </li>
+
+                    <li class="features_list-item col-md-6 col-xl-4" data-order=6 data-aos=fade-up>
+                        <a href="{% url 'course_type' 7 %}">
+                            <div class=card>
+                                <div class=content>
+                                    <div class=card_media><i class="fa-solid fa-laptop icon"></i></div>
+                                    <div class=card_main>
+                                        <h5 class=card_main-title>Kompyuter savodxonligi</h5>
+                                        <p class=card_main-text>
+                                            Kursimizda kompyutering kelib chiqish tarixi, qanday tuzilganligi
+                                             va kompyuter dasturlarini o'rganasiz.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a> 
+                    </li>
+
+                    <li class="features_list-item col-md-6 col-xl-4" data-order=4 data-aos=fade-up>
+                        <a href="{% url 'course_type' 4 %}">
+                            <div class=card>
+                                <div class=content>
+                                    <div class=card_media><i class="fa-solid fa-earth-americas icon"></i></div>
+                                    <div class=card_main>
+                                        <h5 class=card_main-title>Ingliz tili</h5>
+                                        <p class=card_main-text>
+                                            Dunyo bo'yicha eng kop foydalanilayotgan ingliz-tilini 
+                                            biz bilan o'rganing
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="features_list-item col-md-6 col-xl-4" data-order=6 data-aos=fade-up>
+                        <a href="{% url 'course_type' 8 %}">
+                            <div class=card>
+                                <div class=content>
+                                    <div class=card_media><i class="fa-solid fa-earth-americas icon"></i></i></div>
+                                    <div class=card_main>
+                                        <h5 class=card_main-title>Rus tili</h5>
+                                        <p class=card_main-text>
+                                            Rus tilini Bobil akademiyasida malakali o'qituvchilardan o'rganing! 
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a> 
+                    </li>
+
+                    <li class="features_list-item col-md-6 col-xl-4" data-order=6 data-aos=fade-up>
+                        <a href="{% url 'course_type' 9 %}">
+                            <div class=card>
+                                <div class=content>
+                                    <div class=card_media><i class="fa-solid fa-earth-americas icon"></i></div>
+                                    <div class=card_main>
+                                        <h5 class=card_main-title>Arab tili</h5>
+                                        <p class=card_main-text>
+                                            Arab tilini Bobil akademiyasida malakali oq'ituvchilardan o'rganing.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a> 
+                    </li>
+
+                    <li class="features_list-item col-md-6 col-xl-4" data-order=6 data-aos=fade-up>
+                        <a href="{% url 'course_type' 10 %}">
+                            <div class=card>
+                                <div class=content>
+                                    <div class=card_media><i class="fa-solid fa-subscript icon"></i></div>
+                                    <div class=card_main>
+                                        <h5 class=card_main-title>Matematika</h5>
+                                        <p class=card_main-text>
+                                            Matematika fanini Bobil akademiyasida o'rgaing !
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a> 
+                    </li>
+
+                    <li class="features_list-item col-md-6 col-xl-4" data-order=6 data-aos=fade-up>
+                        <a href="{% url 'course_type' 11 %}">
+                            <div class=card>
+                                <div class=content>
+                                    <div class=card_media><i class="fa-solid fa-calculator icon"></i></div>
+                                    <div class=card_main>
+                                        <h5 class=card_main-title>Mentalniy arifmetika</h5>
+                                        <p class=card_main-text>
+                                            Mentalniy arifmetikani Bobil akademiyasida malakali o'qituvchilardan o'rganing
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a> 
+                    </li>
+
+                    <li class="features_list-item col-md-6 col-xl-4" data-order=6 data-aos=fade-up>
+                        <a href="{% url 'course_type' 12 %}">
+                            <div class=card>
+                                <div class=content>
+                                    <div class=card_media><i class="fa-solid fa-font icon"></i></div>
+                                    <div class=card_main>
+                                        <h5 class=card_main-title>Maktabga tayyorlov</h5>
+                                        <p class=card_main-text>
+                                            Maktabga tayyorlov kursimizga marhamat!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a> 
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        
+        <section class="teachers">
+            <div id="container">
+                <h2 class=popular_header-title data-aos=fade-up>Bizning malakali o'qituvchilar</h2>
+                <div id="slider-container">
+                    <span onclick="slideRight()" class="btn"><i class="fa-solid fa-angle-left"></i></span>
+                    <div id="slider">
+                        {% for teacher in teachers %}
+
+                            <div class="slide">
+                                <img src="{{ teacher.imageURL }}" alt="" style="width: 350px; height: 350px; object-fit: cover;">
+                                <div class="teachers">
+                                    <span class="teacher__name">{{ teacher.get_full_name }}</span>
+                                    <p class="teacher__job">
+                                        {{ teacher.specialization }}   
+                                    </p>
+                                </div>
+                            </div>
+
+                        {% endfor %}
+                    </div>
+                    <span onclick="slideLeft()" class="btn"><i class="fa-solid fa-angle-right"></i></span>
+                </div>
+            </div>
+            <form action="{% url 'login' %}" id="login" class="modal" method="post">
+                {% csrf_token %}
+                <a data-close-button class="button__close">X</a>
+                <h4 class="heading__add">Kirish</h4>
+                <input type="text" name="username" placeholder="Username"><br>
+                <input type="password" name="password" placeholder="Password"><br>
+                <button class="button__add">Kirish</button>
+            </form>
+
+            <div class="add__lesson" id="overlay">
+           
+            </div>
+            <form action="{% url 'register_course' %}" id="modal1" class="modal" method="post">
+                {% csrf_token %}
+                <a data-close-button class="button__close">X</a>
+                <h4 class="heading__add">Ro'yhatdan o'tish</h4>
+                <input type="text" name="first_name" placeholder="Ism..."><br>
+                <input type="text" name="last_name" placeholder="Familya...">
+                <input type="tel" name="phone" placeholder="Tel...">
+                <input type="text" name="course" placeholder="Kurs..."><br>
+    
+                <button class="button__add">Ro'yhatdan o'tish</button>
+            </form>
+
+            <div class="add__lesson" id="overlay">
+           
+            </div>
+        </section>
+
+
+        <div class=counter>
+            <div class=underlay></div>
+            <div class=container>
+                <div class="counter_content d-md-flex">
+                    <div class="counter_content-item d-flex flex-column col-md-4"><span class="countNum number"
+                            data-value=249 data-separator=,>0</span> <span class="label h5">O'quvchilar</span>
+                    </div>
+                    <div class="counter_content-item d-flex flex-column col-md-4"><span class="countNum number"
+                            data-prefix=+ data-value=35>0</span> <span class="label h5">Loyihalar</span></div>
+                    <div class="counter_content-item d-flex flex-column col-md-4"><span class="countNum number"
+                            data-prefix=+ data-value=67>0</span> <span class="label h5">Ish bilan taminlanganlar</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+{% endblock %}

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang=en>
+{% load static %}
+<head>
+        <meta charset=UTF-8>
+        <meta name=viewport content="width=device-width,initial-scale=1,minimum-scale=1">
+        <meta http-equiv=X-UA-Compatible content="ie=edge">
+        <title>Bobil Academy</title>
+        <script id=www-widgetapi-script src=https://s.ytimg.com/yts/jsbin/www-widgetapi-vflS50iB-/www-widgetapi.js async=""></script>
+        <script src=https://www.youtube.com/player_api></script>
+        <link rel="stylesheet preload" as=style href="{% static 'css/preload.min.css' %}">
+        <link rel="stylesheet preload" as=style href="{% static 'css/icomoon.css' %}">
+        <link rel="stylesheet preload" as=style href="{% static 'css/libs.min.css' %}">
+        <link rel=stylesheet href="{% static 'css/index.min.css' %}">
+        <link rel=stylesheet href="{% static 'css/floatbutton.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/all.css' %}">
+        <link rel=stylesheet href="{% static 'css/lessons.css' %}">
+
+        <link rel="shortcut icon" type="image/png" href="{% static 'svg/icons.png' %}" class="">
+
+      
+    {% block css %}
+
+    {% endblock %}
+
+</head>
+
+<body>
+    <div class="promobar d-flex align-items-center">
+        <div class="container d-flex align-items-center justify-content-between">
+            <ul class="promobar_socials d-flex align-items-center">
+
+                <li class=promobar_socials-item>
+                    <a class=link href="https://www.facebook.com/search/top?q=bobil%20academy" target=_blank rel="noopener noreferrer">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                </li>
+                <li class=promobar_socials-item>
+                    <a class=link href="https://t.me/bobilacademy" target=_blank rel="noopener noreferrer">
+                        <i class="fa-brands fa-telegram"></i>
+                    </a>
+                </li>
+                <li class=promobar_socials-item>
+                    <a class=link href="https://www.instagram.com/bobilacademy/" target=_blank rel="noopener noreferrer">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+                <li class=promobar_socials-item>
+                    <a class=link href="https://www.youtube.com/@bobilacademy" target=_blank rel="noopener noreferrer">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </li>
+            </ul>
+            <div class="promobar_main d-flex align-items-center">
+                {% if request.user.is_authenticated %}
+                    {% if request.user.is_staff or request.user.user_type == 'Admin' %}
+                    <a class="btn btn--yellow" href="{% url 'dashboard' %}">
+                        <span>Admin</span>
+                    </a>
+                    {% elif request.user.user_type == 'Teacher' %}
+                    <a class="btn btn--yellow" href="{% url 'my_groups' %}">
+                        <span>My Groups</span>
+                    </a>
+                    {% elif request.user.user_type == 'Student' %}
+                    <a class="btn btn--yellow" href="{% url 'mycourses' %}">
+                        <span>My lessons</span>
+                    </a>
+                    {% endif %}
+                    <a class="btn btn--yellow" style="margin-left: 10px;" href="{% url 'logout' %}">
+                        <span>log out</span>
+                    </a>
+                {% else %}
+                <a href="{% url 'login' %}" class="btn btn--yellow" >
+                    <button>Kirish</button>
+                </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    
+    <header class=header data-page="">
+
+            <div class="container d-flex flex-wrap justify-content-between align-items-center">
+
+                <div class="logo header_logo">
+                    <a class="d-inline-flex align-items-center" href="{% url 'index' %}">
+                        <span class=logo_picture>
+                            <img src="{% static 'svg/logo_bg.png' %}" alt=Edison>
+                        </span>
+                    </a>
+                </div>
+    
+                <button class=header_trigger type=button data-bs-toggle=collapse data-bs-target=#headerMenu
+                    aria-controls=headerMenu>
+                    <span class=line></span>
+                    <span class=line></span> <span class=line></span>
+                </button>
+                
+                <nav class="header_nav collapse" id=headerMenu>
+
+                    <ul class=header_nav-list>
+                        <li class=header_nav-list_item>
+                            <a class=nav-item href="{% url 'index' %}" data-page=home>Bosh sahifa</a>
+                        </li>
+
+                        <li class="header_nav-list_item">
+                            <a class="nav-link nav-item" href="{% url 'courses' %}">
+                                O'quv Kurslari
+                            </a>
+
+                        </li>
+                        <li class=header_nav-list_item>
+                            <a class=nav-item href="{% url 'about' %}" data-page=about>Biz haqimizda</a>
+                        </li>
+
+                        <li class=header_nav-list_item>
+                            <a class=nav-item href="{% url 'contacts' %}" data-page=contacts>
+                                Bog'lanish
+                            </a>
+                        </li>
+
+                        
+                    </ul>
+
+                    <ul class="promobar_socials d-flex align-items-center justify-content-center">
+                        <li class=promobar_socials-item>
+                            <a class=link href="index.html#" target=_blank rel="noopener noreferrer">
+                                <i class=icon-facebook></i></a>
+                        </li>
+                        <li class=promobar_socials-item>
+                            <a class=link href="index.html#" target=_blank rel="noopener noreferrer">
+                                <i class=icon-twitter></i></a>
+                        </li>
+                        <li class=promobar_socials-item>
+                            <a class=link href="index.html#" target=_blank rel="noopener noreferrer">
+                                <i class=icon-instagram></i>
+                            </a>
+                        </li>
+                    </ul>
+
+                </nav>
+
+                
+            </div>
+            
+    </header>
+    {% block content %}
+
+    {% endblock %}
+
+    <footer class=footer>
+        <div class=container>
+            <div class="footer_wrapper d-sm-flex flex-wrap flex-lg-nowrap justify-content-lg-between">
+                <div class="footer_block col-sm-6 col-lg-auto" data-order=1>
+
+                    <div class="logo logo--footer">
+                        <a class="d-inline-flex align-items-center" href="index.html">
+                            <span class=logo_picture>
+                                <img src="{% static 'svg/logo_bg.png' %}" alt=Edison>
+                            </span>
+                        
+                        </a>
+                    </div>
+                    <p class=footer_block-text>
+                       Bobil Academy bilan ijtimoiy tarmoq orqali va telefon orqali bog'lanish
+                    </p>
+                    <ul class="footer_block-socials d-flex align-items-center">
+                        <li class=footer_block-socials_item>
+                            <a class=link href=https://t.me/bobilacademy target=_blank rel="noopener noreferrer">
+                                <i class="fa-brands fa-telegram"></i>
+                            </a>
+                        </li>
+                        <li class=footer_block-socials_item>
+                            <a class=link href=https://www.instagram.com/bobilacademy/ target=_blank rel="noopener noreferrer">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li class=footer_block-socials_item>
+                            <a class=link href="https://www.facebook.com/search/top?q=bobil%20academy" target=_blank rel="noopener noreferrer">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class=footer_block-socials_item>
+                            <a class=link href=https://www.youtube.com/@bobilacademy target=_blank rel="noopener noreferrer">
+                                <i class="fa-brands fa-youtube"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="wrapper d-flex flex-column">
+                        <a class="link link--contacts text text--sm d-inline-flex align-items-center" href="{{ contact.email }}">
+                            <i class="fa-solid fa-envelope icon"></i>
+                            <span class="__cf_email__" data-cfemail="a1c0c2c0c5c4d2c8d0e1ccc0c8cd8fc2cecc">
+                                {{ contact.email }}
+                            </span>
+                        </a>
+                        <a class="link link--contacts text text--sm d-inline-flex align-items-center">
+                            <i class="fa-solid fa-phone icon"></i> {{ contact.phone1 }}
+                        </a>
+                        <a class="link link--contacts text text--sm d-inline-flex align-items-center mt-2">
+                            <i class="fa-solid fa-phone icon"></i> {{ contact.phone2 }}
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer_block col-sm-6 col-lg-auto" data-order=2>
+                    <h5 style="color: #01B4B1;" class=footer_block-header>Dasturlash kurslar:</h5>
+                    <ul class=footer_block-nav>
+                        <li class=footer_block-nav_item><a class=link href="{% url 'course_type' 1 %}">Web Frontend</a></li>
+                        <li class=footer_block-nav_item><a class=link href="{% url 'course_type' 2 %}">Backend</a></li>
+                        <li class=footer_block-nav_item><a class=link href="{% url 'course_type' 3 %}">Android</a></li>
+                        <li class=footer_block-nav_item><a class=link href="{% url 'course_type' 5 %}">Flutter</a></li>
+                        <li class=footer_block-nav_item><a class=link href="{% url 'course_type' 6 %}">3D MAX</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-sm-1 col-lg-1" data-order=2>
+                    
+                </div>
+
+                <div class="footer_block col-sm-6 col-lg-auto" data-order=2>
+                    <h5 style="color: #01B4B1;" class=footer_block-header>Til va tayyorlov kurslar:</h5>
+                    <ul class=footer_block-nav>
+                    
+                        <li class=footer_block-nav_item><a class=link href="{% url 'course_type' 4 %}">Ingliz tili</a></li>
+                        <li class=footer_block-nav_item><a class=link href="{% url 'course_type' 8 %}">Rus tili</a></li>
+                        <li class=footer_block-nav_item><a class=link href="{% url 'course_type' 9 %}">Arab tili</a></li>
+                        <li class=footer_block-nav_item><a class=link href="{% url 'course_type' 10 %}">Matematika</a></li>
+                        <li class=footer_block-nav_item><a class=link href="{% url 'course_type' 11 %}">Mentalniy arifmetika</a></li>
+                        <li class=footer_block-nav_item><a class=link href="{% url 'course_type' 12 %}">Maktabga tayyorlov</a></li>
+                        <li class=footer_block-nav_item><a class=link href="{% url 'course_type' 7 %}">Kompyuter savodxonligi</a></li>
+                        
+                    </ul>
+                </div>
+
+                <!-- <div class="col-sm-1 col-lg-1" data-order=2>
+                    
+                </div> -->
+
+
+                 <div class="footer_block col-sm-4 col-lg-4 m-sm-0 " style="padding-left: 60px;" data-order=3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d307.5670836946217!2d69.2041703403963!3d41.36359776701416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8c2e1fdd4033%3A0xa3c391ac06f24ec7!2sMakro%20supermarket!5e0!3m2!1sru!2s!4v1676548152618!5m2!1sru!2s" width="400" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                 </div>
+            </div>
+        </div>
+        <div class=footer_secondary>
+            <div class="container d-flex flex-column flex-sm-row align-items-center justify-content-sm-between">
+                <a class=footer_secondary-scroll id=scrollToTop>
+                
+                </a>
+                <p class=footer_secondary-copyright>
+                    Bobil Academy 2023
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/lottie.js' %}"></script>
+    <script src="{% static 'js/common.min.js' %}"></script>
+    <script src="{% static 'js/map.min.js' %}"></script>
+    <script src="{% static 'js/demo.js' %}"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J2SRB925J5"></script>
+    <script src="{% static 'js/teachers.js' %}"></script>
+    <script src="{% static 'js/team.min.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+
+    <script>window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-J2SRB925J5');</script>
+        <script>
+            if ( window.history.replaceState ) {
+                window.history.replaceState( null, null, window.location.href );
+            }
+        </script>
+
+</body>
+
+</html>

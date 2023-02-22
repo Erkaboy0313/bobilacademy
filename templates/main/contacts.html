@@ -1,0 +1,94 @@
+{% extends 'main/main.html' %}
+{% load static %}
+{% block content %}
+    {% block css %}
+        <link rel=stylesheet href="{% static 'css/contacts.min.css' %}">
+        <!-- <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}"> -->
+    {% endblock %}
+
+    <header class=page>
+        <div class=page_main>
+            <div class=underlay></div>
+            <div class=container>
+                <div class=content-wrapper>
+                    <h2 style="color: #01B4B1;" class=page_main-header>Biz bilan bog'lanish</h1>
+                    <p class=page_main-text>
+                    </p>
+                </div>
+                <ul class="page_main-list d-sm-flex flex-wrap justify-content-center">
+                    <li class=page_main-list_item data-aos=fade-up>
+                        <div class=wrapper>
+                            <div class="content d-flex justify-content-sm-center align-items-center">
+                                <i class="fa-solid fa-location-dot icon"></i>
+                                <div class=block>
+                                    <span class="content_text text">
+                                        {{ contact.address }}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class=page_main-list_item data-aos=fade-up data-aos-delay=50>
+                        <div class=wrapper>
+                            <div class="content d-flex justify-content-sm-center align-items-center">
+                                <i class="fa-solid fa-phone icon"></i>
+                                <div class="block d-flex flex-column">
+                                    <a class="content_link text" >
+                                        {{ contact.phone1 }}
+                                    </a>
+                                    <a class="content_link text" >
+                                        {{ contact.phone2 }}
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class=page_main-list_item data-aos=fade-up data-aos-delay=100>
+                        <div class=wrapper>
+                            <div class="content d-flex justify-content-sm-center align-items-center">
+                                <i class="fa-solid fa-envelope icon"></i>
+                                <div class="block d-flex flex-column">
+
+                                    <a class="content_link text" href="">
+                                        <span class="__cf_email__">
+                                            {{ contact.email }}
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main class=contacts>
+        <section class=contacts_form>
+            <div class=container>
+                <div class=contacts_form-header>
+                    <h2 style="color: #01B4B1;" class=contacts_form-header_title>Sizning biz haqimizdagi fikringiz</h2>
+                </div>
+                <form class=contacts_form-form  method='post'>
+                    
+                    {% csrf_token %}
+                    <div class="contacts_form-form_wrapper d-sm-flex justify-content-between">
+                        <input class="field required" type='text' name="first_name" placeholder='Ism' >
+                        <input class="field required" type='text' name="phone" data-type=tel placeholder="Telefon raqam" >
+                    </div>
+                    <div class="contacts_form-form_wrapper d-sm-flex justify-content-between">
+                        <input class="field required" type='text' name="last_name" placeholder='Familya' >
+                        <input class="field required" type='text' name="subject" placeholder='Murojaat mavzusi'>
+                    </div>
+                    <textarea class="field required" placeholder="Murojaat matni" name="body" data-type='message' ></textarea>
+                    <div class=contacts_form-form_footer>
+                        <button class="btn btn--gradient" type="submit">
+                            <span class='text'>Habarni yuborish</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+{% endblock %}

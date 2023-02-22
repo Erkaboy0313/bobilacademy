@@ -1,0 +1,31 @@
+{% extends 'main/main.html' %}
+{% load static %}
+    {% block css %}
+        <link rel=stylesheet href="{% static 'css/course.min.css' %}">
+    {% endblock %}
+{% block content %}
+
+    <main>
+        <section class=hero>
+            <div class=underlay>
+                <div class="underlay_bgrus rellax"></div>
+            </div>
+            <div class="container d-flex flex-column align-items-center"><span
+                    class="hero_icon d-flex align-items-center justify-content-center">
+                    <i class="fa-solid fa-earth-americas icon"></i>
+                </span>
+                <h2 class=hero_header>Rus tili kursimiz</h2>
+                <p class=hero_text>
+                    Rus tili va adabiyot (abiturentlar uchun, DTM), Rus tili (grammatika, oĝzaku nutq, yozish va boshqalar)
+                    Maqsad: Rus tilini òrganmoqchi bòlgan barcha yoshdagi insonlar va abiturentlarni tayyorlaymiz. 
+                    Siz ushbu kurs davomida rus tilini (òqish, yozish, gapirish)ni chuqur òrganishingiz mumkin. 
+                </p>
+              
+             
+            </div>
+        </section>
+    
+    
+    </main>
+
+{% endblock %}

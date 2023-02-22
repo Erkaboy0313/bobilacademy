@@ -1,0 +1,121 @@
+{% extends 'main/main.html' %}
+{% load static %}
+    {% block css %}
+        <link rel=stylesheet href="{% static 'css/course.min.css' %}">
+    {% endblock %}
+{% block content %}
+
+    <main>
+        <section class=hero>
+            <div class=underlay>
+                <div class="underlay_bg rellax"></div>
+            </div>
+            <div class="container d-flex flex-column align-items-center"><span
+                    class="hero_icon d-flex align-items-center justify-content-center">
+                    <i class="fa-solid fa-gears icon"></i>
+                </span>
+                <h2 class=hero_header>Backend dasturlash kursi</h2>
+                <p class=hero_text>
+                    Backend sayt va serverning ichki qismidir (ing. Orqaga - orqaga). Umuman olganda, bu sayt va serverning to'g'ri ishlashiga imkon beruvchi dasturiy ta'minot va apparat majmuasidir.</p>
+
+            </div>
+        </section>
+
+        <section class=skills id=skills>
+            <div class=container>
+                <div class=skills_header>
+                    <h2 class=skills_header-title>Kurs davomida quyidagi texnalogiyalar o'tiladi</h2>
+
+                </div>
+                <ul class="skills_list d-sm-flex flex-wrap">
+                    <li
+                        class="skills_list-item col-sm-6 col-xl-3 d-flex flex-column align-items-center justify-content-center">
+                        <span class="skills_list-item_title h5 d-flex flex-column align-items-center">
+                            <i class="fa-brands fa-python icon"></i>Python</span>
+                        <p class=skills_list-item_text>
+                            Python - bu turli sohalar uchun yuqori darajadagi umumiy maqsadli dasturlash tili.
+                        </p>
+                    </li>
+                    <li
+                        class="skills_list-item col-sm-6 col-xl-3 d-flex flex-column align-items-center justify-content-center">
+                        <span class="skills_list-item_title h5 d-flex flex-column align-items-center">
+                            <img src="{% static 'svg/2560px-OOP.svg.svg' %}" alt="" class="img"> OOP</span>
+                        <p class=skills_list-item_text>
+                            OOP - dasturlashda o’zaro bo’gliq bo’lgan o’zgaruvchilar va funksiyalar bitta 
+                            konteynerga jamlanadi va bunday konteynerlar obyekt deb ataladi
+                        </p>
+                    </li>
+                    <li
+                        class="skills_list-item col-sm-6 col-xl-3 d-flex flex-column align-items-center justify-content-center">
+                        <span class="skills_list-item_title h5 d-flex flex-column align-items-center">
+                            <img src="{% static 'svg/Postgresql.svg' %}" alt="" class="img1"> PostgreSQL</span>
+                        <p class=skills_list-item_text>
+                            PostgreSQL - bu relyatsion ma'lumotlar omborini boshqarish tizimi. Ya'ni, 
+                            ma'lumotlarni boshqarish tizimi bo'lib, u aloqalar(relation) ko'rinishida taqdim etiladi.
+                        </p>
+                    </li>
+                    <li
+                        class="skills_list-item col-sm-6 col-xl-3 d-flex flex-column align-items-center justify-content-center">
+                        <span class="skills_list-item_title h5 d-flex flex-column align-items-center">
+                            <i class="fa-brands fa-telegram icon"></i>Telegrab Bot</span>
+                        <p class=skills_list-item_text>
+                            Bot - bu haqiqiy odamning mavjudligini taqlid qiluvchi dastur (virtual suhbatdosh).
+                             Telegram bot mos ravishda yozishmalarni almashtirishga qodir bo'lgan ilova.
+                        </p>
+                    </li>
+                    <li
+                        class="skills_list-item col-sm-6 col-xl-3 d-flex flex-column align-items-center justify-content-center">
+                        <span class="skills_list-item_title h5 d-flex flex-column align-items-center">
+                            <i class="fa-brands fa-github icon"></i>GitHub</span>
+                        <p class=skills_list-item_text>
+                            GitHub - bu Git repozitoriylarini boshqarishga imkon beradigan bulutga asoslangan hosting xizmati.
+                        </p>
+                    </li>
+                    <li
+                        class="skills_list-item col-sm-6 col-xl-3 d-flex flex-column align-items-center justify-content-center">
+                        <span class="skills_list-item_title h5 d-flex flex-column align-items-center">
+                            <img src="{% static 'svg/django.svg' %}" alt="" class="img"> Django</span>
+                        <p class=skills_list-item_text>
+                            Django - python dasturlash tilida veb ilovalar ishlab chiqish uchun ajoyib freymvork.
+                        </p>
+                    </li>
+                    <li
+                        class="skills_list-item col-sm-6 col-xl-3 d-flex flex-column align-items-center justify-content-center">
+                        <span class="skills_list-item_title h5 d-flex flex-column align-items-center">
+                            <img src="{% static 'svg/api_rest.svg' %}" alt="" class="img"> RestAPI</span>
+                        <p class=skills_list-item_text>
+                            API - serverning asosiy qismi bo'lib, u so'rovlar qabul qiladi va ularga javoblar qaytaradi.
+                        </p>
+                    </li>
+                    <li
+                        class="skills_list-item col-sm-6 col-xl-3 d-flex flex-column align-items-center justify-content-center">
+                        <span class="skills_list-item_title h5 d-flex flex-column align-items-center">
+                            <i class="fa-solid fa-gears icon"></i> Real loyihalar bilan ishlash</span>
+                        <p class=skills_list-item_text>
+                            
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <button class="btn__courses" data-modal-target = "#modal1">Ro'yhatdan o'tish</button>
+            <form action="{% url 'register_course' %}" id="modal1" class="modal" method="post">
+                {% csrf_token %}
+                <a data-close-button class="button__close">X</a>
+                <h4 class="heading__add">Ro'yhatdan o'tish</h4>
+                <input type="text" name="first_name" placeholder="Ism..."><br>
+    
+                <input type="text" name="last_name" placeholder="Familya...">
+                <input type="tel" name="phone" placeholder="Tel...">
+                <input type="hidden" name="course" value="backend"><br>
+    
+                <button class="button__add">Ro'yhatdan o'tish</button>
+            </form>
+
+            <div class="add__lesson" id="overlay">
+           
+            </div>
+        </section>
+
+    </main>
+
+{% endblock %}

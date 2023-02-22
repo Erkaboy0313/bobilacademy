@@ -1,0 +1,197 @@
+
+.content-for-lessons{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+}
+
+.content-for-lessons .left-side{
+    width: 80%;
+    height: 100%;
+}
+
+
+.content-for-lessons .right-side{
+    width: 20%;
+    height: 100%;
+    border-right: 1px solid #01B4B1;
+}
+
+.content-for-lessons .left-side .name-course{
+    width: 90%;
+    height: 80px;
+    margin: 0 auto;
+    color: #01B4B1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: bold;
+    border-bottom: 3px double #01B4B1;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.content-for-lessons .right-side .courses{
+    font-size: 24px;
+    font-weight: bold;
+    color: #01B4B1;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.courses-box{
+    width: 100%;
+}
+.courses-box .active-course{
+    border-top: 1px solid #01B4B1;
+    border-bottom: 1px solid #01B4B1;
+    background-color: #01b4b125;
+}
+
+.course-item{
+    cursor: pointer;
+    padding-left: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.content-for-lessons .left-side .lessons-box{
+width: 100%;
+height: 100%;
+overflow: auto;
+}
+
+.content-for-lessons .left-side .lessons-box .lesson-item{
+    width: 70%;
+    height: 150px;
+    background-color: #01B4B1;
+    margin: 20px auto 0 auto;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.content-for-lessons .left-side .lessons-box .lesson-item .name-lesson{
+    width: 100%;
+    height: 25%;
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #09a09d;
+}
+
+
+.content-for-lessons .left-side .lessons-box .lesson-item .bottom{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 85%;
+}
+
+.content-for-lessons .left-side .lessons-box .lesson-item .bottom .count-lesson {
+    color: white;
+    font-weight: bold;
+    padding-left: 20px;
+    font-size: 22px;
+}
+
+.content-for-lessons .left-side .lessons-box .lesson-item .bottom .data-lesson{
+    display: flex;
+    justify-content: space-around;
+    width: 75%;
+    height: 100%;
+    align-items: center;
+    margin-left: 70px;
+}
+
+.content-for-lessons .left-side .lessons-box .lesson-item .bottom .data-lesson .video-lesson {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+   
+}
+
+.content-for-lessons .left-side .lessons-box .lesson-item .bottom .data-lesson .video-lesson img{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.content-for-lessons .left-side .lessons-box .lesson-item .bottom .data-lesson .video-lesson b{
+    font-size: 16px;
+    color: white;
+}
+
+@media (max-width: 768px) {
+
+
+    .content-for-lessons .left-side{
+        width: 65%;
+    }
+    
+    .content-for-lessons .right-side{
+        width: 35%;
+    }
+
+    .content-for-lessons .right-side .courses{
+        font-size: 18px;
+    }
+
+    .course-item{
+        cursor: pointer;
+        padding-left: 20px;
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 15px;
+    }
+
+    
+.content-for-lessons .left-side .lessons-box .lesson-item{
+    width: 88%;
+    height: auto;
+    margin: 20px auto 0 auto;
+    display: block;
+    padding-bottom: 10px;
+}
+
+.content-for-lessons .left-side .lessons-box .lesson-item .name-lesson{
+    padding: 8px;
+}
+
+.content-for-lessons .left-side .lessons-box .lesson-item .bottom{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.content-for-lessons .left-side .lessons-box .lesson-item .bottom .count-lesson {
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+}
+
+.content-for-lessons .left-side .lessons-box .lesson-item .bottom .data-lesson{
+    display: block  ;
+    margin: 0 auto;
+}
+
+.content-for-lessons .left-side .lessons-box .lesson-item .bottom .data-lesson .video-lesson {
+    margin-right: 0;
+    margin-top: 20px;
+}
+
+.content-for-lessons .left-side .lessons-box .lesson-item  .bottom .data-lesson .video-lesson img{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.content-for-lessons .left-side .lessons-box .lesson-item .bottom .data-lesson .video-lesson b{
+    font-size: 14px;
+}    
+
+}

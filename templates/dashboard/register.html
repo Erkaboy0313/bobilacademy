@@ -1,0 +1,198 @@
+{% extends 'dashboard/dashboard.html' %}
+{% load static %}
+{% block nav %}
+<li class="nav-item menu-items ">
+  <a class="nav-link" href="{% url 'dashboard' %}">
+    <span class="menu-icon">
+      <i class="mdi mdi-airplay"></i>
+    </span>
+    <span class="menu-title">Home</span>
+  </a>
+</li>
+<li class="nav-item menu-items">
+  <a class="nav-link" href="{% url 'course' %}">
+    <span class="menu-icon">
+      <i class="mdi mdi-book"></i>
+    </span>
+    <span class="menu-title">Course</span>
+  </a>
+</li>
+<li class="nav-item menu-items">
+  <a class="nav-link" href="{% url 'modul' %}">
+    <span class="menu-icon">
+      <i class="mdi mdi-book"></i>
+    </span>
+    <span class="menu-title">Modul</span>
+  </a>
+</li>
+<li class="nav-item menu-items">
+  <a class="nav-link" href="{% url 'teacher' %}">
+    <span class="menu-icon">
+      <i class="mdi mdi-account"></i>
+    </span>
+    <span class="menu-title">Teachers</span>
+  </a>
+</li>
+<li class="nav-item menu-items">
+  <a class="nav-link" href="{% url 'student' %}">
+    <span class="menu-icon">
+      <i class="mdi mdi-account-multiple-outline"></i>
+    </span>
+    <span class="menu-title">Student</span>
+  </a>
+</li>
+<li class="nav-item menu-items">
+  <a class="nav-link" href="{% url 'payment' %}">
+    <span class="menu-icon">
+      <i class="mdi mdi-currency-usd"></i>
+    </span>
+    <span class="menu-title">Payment</span>
+  </a>
+</li>
+<li class="nav-item menu-items">
+  <a class="nav-link" href="{% url 'payment_history' %}">
+    <span class="menu-icon">
+      <i class="mdi mdi-currency-usd"></i>
+    </span>
+    <span class="menu-title">Payment History</span>
+  </a>
+</li>
+<li class="nav-item menu-items">
+  <a class="nav-link" href="{% url 'statistics' %}">
+    <span class="menu-icon">
+      <i class="mdi mdi-contacts"></i>
+    </span>
+    <span class="menu-title">statistics</span>
+  </a>
+</li>
+<li class="nav-item menu-items">
+  <a class="nav-link" href="{% url 'news' %}">
+    <span class="menu-icon">
+      <i class="mdi mdi-message"></i>
+    </span>
+    <span class="menu-title">News</span>
+  </a>
+</li>
+<li class="nav-item menu-items active">
+  <a class="nav-link" href="{% url 'register' %}">
+    <span class="menu-icon">
+      <i class="mdi mdi-message"></i>
+    </span>
+    <span class="menu-title">Register</span>
+  </a>
+</li>
+<li class="nav-item menu-items">
+  <a class="nav-link" href="{% url 'sugessions' %}">
+      <span class="menu-icon">
+          <i class="mdi mdi-message"></i>
+      </span>
+      <span class="menu-title">Suggesions</span>
+  </a>
+</li>
+<li class="nav-item menu-items" >
+  <a class="nav-link" href="{% url 'group' %}">
+    <span class="menu-icon">
+      <i class="mdi mdi-message"></i>
+    </span>
+    <span class="menu-title">Group</span>
+  </a>
+</li>
+{% if request.user.is_staff %}
+<li class="nav-item menu-items">
+    <a class="nav-link" href="{% url 'admins' %}">
+        <span class="menu-icon">
+            <i class="mdi mdi-message"></i>
+        </span>
+        <span class="menu-title">Admins</span>
+    </a>
+</li>
+{% endif %}
+{% endblock %}
+
+{% block content %}
+
+<div class="page-header">
+  <button class="btn btn-success" id="add">Register New</button>
+</div>
+<div class="row ">
+  <div class="col-12 grid-margin stretch-card" id="registerform" style="display: none;">
+    <div style="width: 800px !important;" class="card">
+      <div class="card-body">
+        <form method="post" class="forms-sample" enctype="multipart/form-data">
+          {% csrf_token %}
+          <div class="form-group">
+            <label for="exampleInputName1">First name</label>
+            <input type="text" name="first_name" class="form-control" id="exampleInputName1" placeholder="First name"
+              required>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputName1">Last name</label>
+            <input type="text" name="last_name" class="form-control" id="exampleInputName1" placeholder="Last name"
+              required>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputName1">Phone</label>
+            <input type="text" name="phone" class="form-control" id="exampleInputName1" placeholder="Phone" required>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputName1">Course</label>
+            <input type="text" name="course" class="form-control" id="exampleInputName1" placeholder="Course" required>
+          </div>
+          <button type="submit" class="btn btn-outline-success mr-2">Saqlash</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-12 grid-margin">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">New Studnets</h4>
+        <div class="table-responsive">
+          <table class="table" style="text-align: center;">
+            <thead>
+              <tr>
+                <th> Tartib raqami </th>
+                <th> First name </th>
+                <th> Last name </th>
+                <th> Phone </th>
+                <th> Course </th>
+                <th> O'chirish </th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for s in registers %}
+              <tr id="{{ s.id }}">
+                <td>{{ forloop.counter }}</td>
+                <td> {{ s.first_name }} </td>
+                <td> {{ s.last_name }} </td>
+                <td> {{ s.phone }} </td>
+                <td> {{ s.course }} </td>
+                <td> <i onclick="removeRegister({{s.id}})" class="mdi mdi-delete-circle " style="font-size: 30px;"></i> </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+{% endblock %}
+{% block script %}
+<script nonce="{{ request.csp_nonce }}">
+
+  $(document).ready(function () {
+    $('#add').click(function () {
+      $('#registerform').slideToggle(1000)
+    })
+    $('#update').click(function () {
+      $('#subjectupdate').slideToggle(1000)
+    })
+  })
+
+</script>
+{% endblock %}

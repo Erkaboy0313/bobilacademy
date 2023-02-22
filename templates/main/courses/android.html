@@ -1,0 +1,29 @@
+{% extends 'main/main.html' %}
+{% load static %}
+    {% block css %}
+        <link rel=stylesheet href="{% static 'css/course.min.css' %}">
+    {% endblock %}
+{% block content %}
+
+
+    <main>
+        <section class=hero>
+            <div class=underlay>
+                <div class="underlay_bg rellax"></div>
+            </div>
+            <div class="container d-flex flex-column align-items-center"><span
+                    class="hero_icon d-flex align-items-center justify-content-center">
+                    <i class="fa-brands fa-android icon"></i>
+                </span>
+                <h2 class=hero_header>Android dasturlash kursi</h2>
+                <p class=hero_text>
+                    Android Studio va Kotlin dasturlash tilidan
+                    foydalanib mobil ilovalar yararish
+                </p>
+
+
+            </div>
+        </section>
+    </main>
+
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'main/main.html' %}
+{% load static %}
+{% block content %}
+    {% block css %}
+        <link rel=stylesheet href="{% static 'css/about.min.css' %}">
+    {% endblock %}
+
+    <header class=page>
+
+    </header>
+    <main>
+        <section class="infoblock d-flex flex-column flex-lg-row flex-md-wrap" >
+
+            <div class="infoblock_block col-lg-12 d-flex flex-column justify-content-center align-items-center"
+                data-order=1>
+                <div   class=content>
+                    <h2 class="infoblock_block-header" style="text-align: center; color:rgb(53, 50, 50)">
+                        Bobil Academy o'z ishini boshladi !</h2>
+                    <p class=infoblock_block-text>Bizda qulay muhit, sifatli ta'lim, real loyihalar, IT - jamoa,
+                        tajribali mentorlar ko'magi va tizimlashgan platforma.<br>Barchasi sizlar uchun.<br>
+                        <span style="color: white">Kelajak kasbini hozirdan o'rganing!</span>
+                    </p>
+                </div>
+            </div>
+         
+           
+            
+        </section>
+    </main>
+
+{% endblock %}

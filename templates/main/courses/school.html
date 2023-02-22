@@ -1,0 +1,28 @@
+{% extends 'main/main.html' %}
+{% load static %}
+    {% block css %}
+        <link rel=stylesheet href="{% static 'css/course.min.css' %}">
+    {% endblock %}
+{% block content %}
+
+    <main>
+        <section class=hero>
+            <div class=underlay>
+                <div class="underlay_bgschool rellax"></div>
+            </div>
+            <div class="container d-flex flex-column align-items-center"><span
+                    class="hero_icon d-flex align-items-center justify-content-center">
+                    <i class="fa-solid fa-earth-americas icon"></i>
+                </span>
+                <h3 class=hero_header>Maktabga tayyorlov kursimiz</h2>
+                <p class=hero_text>
+                    Maktabga tayyorlov kursimizga marhamat!
+                </p>
+              
+             
+            </div>
+        </section>
+    
+    </main>
+
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'main/main.html' %}
+{% load static %}
+    {% block css %}
+        <link rel=stylesheet href="{% static 'css/course.min.css' %}">
+    {% endblock %}
+{% block content %}
+
+    <main>
+        <section class=hero>
+            <div class=underlay>
+                <div class="underlay_bgmath rellax"></div>
+            </div>
+            <div class="container d-flex flex-column align-items-center"><span
+                    class="hero_icon d-flex align-items-center justify-content-center">
+                    <i class="fa-solid fa-subscript icon"></i>
+                </span>
+                <h2 class=hero_header>Matematika kursimiz</h2>
+                <p class=hero_text>
+                    Matematika fanini Bobil akademiyasida o'rgaing !
+                    Matematikadan- oliy ta'limga 
+                    Iqtisoslashtirilgan maktablarga Al-Xorazmiy va Prezident maktablariga tayyorlov kabi
+                    imkoniyatlar mavjud.
+                </p>
+              
+             
+            </div>
+        </section>
+    
+    
+    </main>
+
+{% endblock %}

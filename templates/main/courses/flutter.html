@@ -1,0 +1,133 @@
+{% extends 'main/main.html' %}
+{% load static %}
+    {% block css %}
+        <link rel=stylesheet href="{% static 'css/course.min.css' %}">
+    {% endblock %}
+{% block content %}
+
+    <main>
+        <section class=hero>
+            <div class=underlay>
+                <div class="underlay_bg rellax"></div>
+            </div>
+            <div class="container d-flex flex-column align-items-center">
+                <span class="hero_icon d-flex align-items-center justify-content-center">
+                    <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+                                         width="700.000000pt" height="700.000000pt" viewBox="0 0 700.000000 700.000000"
+                                         preserveAspectRatio="xMidYMid meet" class="icon">
+
+                                        <g transform="translate(0.000000,700.000000) scale(0.100000,-0.100000)" stroke="none">
+                                        <path d="M3987 6011 c-21 -6 -2507 -2495 -2507 -2511 0 -8 171 -186 380 -395
+                                        l380 -380 1640 1640 c902 902 1640 1642 1640 1645 0 6 -1513 7 -1533 1z"/>
+                                        <path d="M3312 3019 c-370 -369 -672 -676 -672 -682 0 -7 302 -314 670 -682
+                                        l670 -670 133 0 c72 0 420 1 772 3 l640 2 -675 675 -675 675 675 675 675 675
+                                        -770 0 -771 0 -672 -671z"/>
+                                        </g>
+                                        </svg>
+                </span>
+                <h2 class=hero_header>Flutter dasturlash kursi</h2>
+                <p class=hero_text>
+                    Flutter - Google tomonidan ishlab chiqilgan framework hisoblanadi. Bu kurs orqali siz
+                     bir vaqtning o'zida yangi til Dart ni o`rganib Android va iOS mobil ilovalarni yarata olasiz.
+                </p>
+              
+             
+            </div>
+        </section>
+     
+        <section class=skills id=skills>
+            <div class=container>
+                <div class=skills_header>
+                    <h2 class=skills_header-title>Kurs davomida quyidagi texnalogiyalar o'tiladi</h2>
+                   
+                </div>
+                <ul class="skills_list d-sm-flex flex-wrap">
+                    <li
+                        class="skills_list-item col-sm-6 col-xl-3 d-flex flex-column align-items-center justify-content-center">
+                        <span class="skills_list-item_title h5 d-flex flex-column align-items-center">
+                            <img src="{% static 'svg/flutter/dart.svg' %}" alt="" class="img"></i>Dart</span>
+                        <p class=skills_list-item_text>
+                            Dart - Google kompaniyasi tomonidan, umumiy qo'llanish uchun yaratilingan dasturlash tilidir.
+                        </p>
+                    </li>
+                    <li
+                        class="skills_list-item col-sm-6 col-xl-3 d-flex flex-column align-items-center justify-content-center">
+                        <span class="skills_list-item_title h5 d-flex flex-column align-items-center">
+                            <img src="{% static 'svg/flutter/firebase.svg' %}" alt="" class="img1"> Firebase</span>
+                        <p class=skills_list-item_text>
+                            Firebase - bu real vaqtda ma'lumotlar bazasida fayllaringizni saqlaydigan bepul hosting .
+                        </p>
+                    </li>
+                    <li
+                        class="skills_list-item col-sm-6 col-xl-3 d-flex flex-column align-items-center justify-content-center">
+                        <span class="skills_list-item_title h5 d-flex flex-column align-items-center">
+                           <img src="{% static 'svg/flutter/sqf.svg' %}" alt="" class="img"> Sqflite</span>
+                        <p class=skills_list-item_text>
+                            Sqflite local datrabase bolib malumotlarni jadval korinishida saqlaydi
+                        </p>
+                    </li>
+                    <li
+                        class="skills_list-item col-sm-6 col-xl-3 d-flex flex-column align-items-center justify-content-center">
+                        <span class="skills_list-item_title h5 d-flex flex-column align-items-center">
+                            <img src="{% static 'svg/flutter/hive.svg' %}" alt="" class="img"> Hive</span>
+                        <p class=skills_list-item_text>
+                            Hive bu local database bolib malumotlaringizni local holatda saqlah uchun kerak boladigan package
+                        </p>
+                    </li>
+                    <li
+                        class="skills_list-item col-sm-6 col-xl-3 d-flex flex-column align-items-center justify-content-center">
+                        <span class="skills_list-item_title h5 d-flex flex-column align-items-center">
+                            <img src="{% static 'svg/flutter/flutter_favorite1.png' %}" alt="" class="img1"> Provider</span>
+                        <p class=skills_list-item_text>
+                            Provider : inheretent  widget qilingan holati bolib bir sahifada ozgarishlarni qayta tetiklash uchun kerak boladigan package
+                        </p>
+                    </li>
+                    <li
+                        class="skills_list-item col-sm-6 col-xl-3 d-flex flex-column align-items-center justify-content-center">
+                        <span class="skills_list-item_title h5 d-flex flex-column align-items-center">
+                           <img src="{% static 'svg/flutter/bloc.png' %}" alt="" class="img"> Bloc</span>
+                        <p class=skills_list-item_text>
+                            Bloc: State Managment mahsuloti bolib sahifada boladigan ozgarishlarni boshqarish uchun kerak boladigan package
+                        </p>
+                    </li>
+                    <li
+                        class="skills_list-item col-sm-6 col-xl-3 d-flex flex-column align-items-center justify-content-center">
+                        <span class="skills_list-item_title h5 d-flex flex-column align-items-center">
+                           <img src="{% static 'svg/flutter/getx.jpg' %}" class="img" alt=""> Getx</span>
+                        <p class=skills_list-item_text>
+                            Getx bu State Managment mahsuloti bolib sahifadagi holatlarni qayta tetiklash uchun va birqancha qulaylikarga ega Flutter package.
+                        </p>
+                    </li>
+                    <li
+                        class="skills_list-item col-sm-6 col-xl-3 d-flex flex-column align-items-center justify-content-center">
+                        <span class="skills_list-item_title h5 d-flex flex-column align-items-center">
+                            <img src="{% static 'svg/flutter/instagram.svg' %}" class="img1" alt="">UI Clone Instagram</span>
+                        <p class=skills_list-item_text>
+                            Quyidagi texnalogilaridan foydalanib Android, IOS tizimlariga Instagnam ilovasini yaratish. 
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <button class="btn__courses" data-modal-target = "#modal1">Ro'yhatdan o'tish</button>
+            
+            <form action="{% url 'register_course' %}" id="modal1" class="modal" method="post">
+                {% csrf_token %}
+                <a data-close-button class="button__close">X</a>
+                <h4 class="heading__add">Ro'yhatdan o'tish</h4>
+                <input type="text" name="first_name" placeholder="Ism..."><br>
+    
+                <input type="text" name="last_name" placeholder="Familya...">
+                <input type="tel" name="phone" placeholder="Tel...">
+                <input type="hidden" name="course" value="flutter"><br>
+    
+                <button class="button__add">Ro'yhatdan o'tish</button>
+            </form>
+
+            <div class="add__lesson" id="overlay">
+           
+            </div>
+        </section>
+    
+    </main>
+
+{% endblock %}

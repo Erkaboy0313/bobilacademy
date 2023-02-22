@@ -1,0 +1,226 @@
+{% extends 'main/main.html' %}
+{% load static %}
+{% block content %}
+    <header class=page>
+        
+    </header>
+    <main>
+        <div class=underlay></div>
+    
+        <div class=features id="coursess">
+            <div class=container>
+                <h2 style="color: #01B4B1;" class="courses__heading">Bizning kurslarimiz</h1>
+                    <ul class="features_list d-md-flex flex-wrap">
+
+                        <li class="features_list-item col-md-6 col-xl-4" data-order=1 data-aos=fade-up>
+                            <a href="{% url 'course_type' 1 %}">
+                                <div class=card>
+                                    <div class=content>
+                                        <div class=card_media><i class="fa-solid fa-code icon"></i></div>
+                                        <div class=card_main>
+                                            <h5 class=card_main-title>Web Frontend</h5>
+                                            <p class=card_main-text>
+                                                Fronted kursimizda zamonaviy texnologiyalardan foydalanib web-saytlar yaratasiz</p>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </a>
+                        </li>
+    
+                        <li class="features_list-item col-md-6 col-xl-4" data-order=2 data-aos=fade-up>
+                            <a href="{% url 'course_type' 2 %}">
+                                <div class=card>
+                                    <div class=content>
+                                        <div class=card_media><i class="fa-solid fa-gears icon"></i></div>
+                                        <div class=card_main>
+                                            <h5 class=card_main-title>Backend</h5>
+                                            <p class=card_main-text>Python dasturlash tilidan foydalanib web-sayt, mobil va desktop ilovalari uchun
+                                                 <b>backend</b> qismini yaratish</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+    
+                        <li class="features_list-item col-md-6 col-xl-4" data-order=3 data-aos=fade-up>
+                            <a href="{% url 'course_type' 3 %}">
+                                <div class=card>
+                                    <div class=content>
+                                        <div class=card_media><i class="fa-brands fa-android icon"></i></div>
+                                        <div class=card_main>
+                                            <h5 class=card_main-title>Android</h5>
+                                            <p class=card_main-text>Android Studio va Kotlin dasturlash tilidan 
+                                                foydalanib mobil ilovalar yararish</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a> 
+                        </li>
+    
+                        <li class="features_list-item col-md-6 col-xl-4" data-order=5 data-aos=fade-up>
+                            <a href="{% url 'course_type' 5 %}">
+                                <div class=card>
+                                    <div class=content>
+                                        <div class=card_media>
+                                            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+                                                 width="700.000000pt" height="700.000000pt" viewBox="0 0 700.000000 700.000000"
+                                                 preserveAspectRatio="xMidYMid meet" class="icon">
+    
+                                                <g transform="translate(0.000000,700.000000) scale(0.100000,-0.100000)" stroke="none">
+                                                <path d="M3987 6011 c-21 -6 -2507 -2495 -2507 -2511 0 -8 171 -186 380 -395
+                                                l380 -380 1640 1640 c902 902 1640 1642 1640 1645 0 6 -1513 7 -1533 1z"/>
+                                                <path d="M3312 3019 c-370 -369 -672 -676 -672 -682 0 -7 302 -314 670 -682
+                                                l670 -670 133 0 c72 0 420 1 772 3 l640 2 -675 675 -675 675 675 675 675 675
+                                                -770 0 -771 0 -672 -671z"/>
+                                                </g>
+                                                </svg>
+                                        </div>
+                                        <div class=card_main>
+                                            <h5 class=card_main-title>Flutter</h5>
+                                            <p class=card_main-text>
+                                                Flutter framework va Dart dasturlash tili orqali 
+                                                <b>Android</b> va <b> IOS</b> tizimlariga mobil ilovalar yaratish</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+    
+                        <li class="features_list-item col-md-6 col-xl-4" data-order=6 data-aos=fade-up>
+                            <a href="{% url 'course_type' 6 %}">
+                                <div class=card>
+                                    <div class=content>
+                                        <div class=card_media><i class="fa-solid fa-cube icon"></i></div>
+                                        <div class=card_main>
+                                            <h5 class=card_main-title>3D MAX</h5>
+                                            <p class=card_main-text>
+                                                3D Max turli xil texnika va mexanizmlardan foydalangan holda turli shakl va murakkablikdagi 
+                                                 uch o'lchovli kompyuter modellarini yaratish dasturi.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a> 
+                        </li>
+    
+                        <li class="features_list-item col-md-6 col-xl-4" data-order=6 data-aos=fade-up>
+                            <a href="{% url 'course_type' 7 %}">
+                                <div class=card>
+                                    <div class=content>
+                                        <div class=card_media><i class="fa-solid fa-laptop icon"></i></div>
+                                        <div class=card_main>
+                                            <h5 class=card_main-title>Kompyuter savodxonligi</h5>
+                                            <p class=card_main-text>
+                                                Kursimizda kompyutering kelib chiqish tarixi, qanday tuzilganligi
+                                                 va kompyuter dasturlarini o'rganasiz.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a> 
+                        </li>
+    
+                        <li class="features_list-item col-md-6 col-xl-4" data-order=4 data-aos=fade-up>
+                            <a href="{% url 'course_type' 4 %}">
+                                <div class=card>
+                                    <div class=content>
+                                        <div class=card_media><i class="fa-solid fa-earth-americas icon"></i></div>
+                                        <div class=card_main>
+                                            <h5 class=card_main-title>Ingliz tili</h5>
+                                            <p class=card_main-text>
+                                                Dunyo bo'yicha eng kop foydalanilayotgan ingliz-tilini 
+                                                biz bilan o'rganing
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+    
+                        <li class="features_list-item col-md-6 col-xl-4" data-order=6 data-aos=fade-up>
+                            <a href="{% url 'course_type' 8 %}">
+                                <div class=card>
+                                    <div class=content>
+                                        <div class=card_media><i class="fa-solid fa-earth-americas icon"></i></i></div>
+                                        <div class=card_main>
+                                            <h5 class=card_main-title>Rus tili</h5>
+                                            <p class=card_main-text>
+                                                Rus tilini Bobil akademiyasida malakali o'qituvchilardan o'rganing! 
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a> 
+                        </li>
+    
+                        <li class="features_list-item col-md-6 col-xl-4" data-order=6 data-aos=fade-up>
+                            <a href="{% url 'course_type' 9 %}">
+                                <div class=card>
+                                    <div class=content>
+                                        <div class=card_media><i class="fa-solid fa-earth-americas icon"></i></div>
+                                        <div class=card_main>
+                                            <h5 class=card_main-title>Arab tili</h5>
+                                            <p class=card_main-text>
+                                                Arab tilini Bobil akademiyasida malakali oq'ituvchilardan o'rganing.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a> 
+                        </li>
+    
+                        <li class="features_list-item col-md-6 col-xl-4" data-order=6 data-aos=fade-up>
+                            <a href="{% url 'course_type' 10 %}">
+                                <div class=card>
+                                    <div class=content>
+                                        <div class=card_media><i class="fa-solid fa-subscript icon"></i></div>
+                                        <div class=card_main>
+                                            <h5 class=card_main-title>Matematika</h5>
+                                            <p class=card_main-text>
+                                                Matematika fanini Bobil akademiyasida o'rgaing !
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a> 
+                        </li>
+    
+                        <li class="features_list-item col-md-6 col-xl-4" data-order=6 data-aos=fade-up>
+                            <a href="{% url 'course_type' 11 %}">
+                                <div class=card>
+                                    <div class=content>
+                                        <div class=card_media><i class="fa-solid fa-calculator icon"></i></div>
+                                        <div class=card_main>
+                                            <h5 class=card_main-title>Mentalniy arifmetika</h5>
+                                            <p class=card_main-text>
+                                                Mentalniy arifmetikani Bobil akademiyasida malakali o'qituvchilardan o'rganing
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a> 
+                        </li>
+    
+                        <li class="features_list-item col-md-6 col-xl-4" data-order=6 data-aos=fade-up>
+                            <a href="{% url 'course_type' 12 %}">
+                                <div class=card>
+                                    <div class=content>
+                                        <div class=card_media><i class="fa-solid fa-font icon"></i></div>
+                                        <div class=card_main>
+                                            <h5 class=card_main-title>Maktabga tayyorlov</h5>
+                                            <p class=card_main-text>
+                                                Maktabga tayyorlov kursimizga marhamat!
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a> 
+                        </li>
+                    </ul>
+            </div>
+        </div>
+
+
+    </main>
+
+{% endblock %}
