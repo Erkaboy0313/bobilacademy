@@ -24,9 +24,9 @@ AUTH_USER_MODEL = 'user.CustomUser'
 SECRET_KEY = 'django-insecure-anx96k^nfpv)9nfo+9p%v)wy+pnfqqs$mj^a&l+ohsv1n9=ek)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['esacademy.uz','www.esacademy.uz','127.0.0.1','192.168.100.33']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -88,22 +88,15 @@ WSGI_APPLICATION = 'EduSpace_Academy.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    #     'ENGINE': 'django.db.backends.postgresql',
-    #     'NAME': 'esacademy',
-    #     'USER': 'postgres',
-    #     'PASSWORD':'eric',
-    #     'HOST': 'localhost',
-    #     'PORT': '5432',
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'bobil',
+        'USER': 'bobil_admin',
+        'PASSWORD': 'bobil_admin',
+        'HOST': 'localhost',
+        'PORT': '',
     }
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.mysql',
-    #     'NAME': 'u1624105_esacademy',
-    #     'USER': 'u1624105_eric',
-    #     'PASSWORD': 'Nevergiveup3',
-    #     'HOST': 'localhost',
-    # }
 }
 
 
@@ -143,7 +136,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 import os
 
-STATIC_URL = 'static/'
+STATIC_URL = 'whole_static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'whole_static')
 
 STATICFILES_DIRS = [
